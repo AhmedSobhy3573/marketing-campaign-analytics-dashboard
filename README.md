@@ -1,11 +1,14 @@
 # Marketing Campaign Analytics Project
 
+---
+
 ## Introduction (Problem-Driven)
 
 Marketing data is often fragmented, inconsistent, and not immediately usable for decision-making.
 
-This project addresses a core business challenge:  
-**How can raw campaign data be transformed into a structured analytical system that enables performance evaluation and strategic decision-making?**
+This project addresses a core business challenge:
+
+> **How can raw campaign data be transformed into a structured analytical system that enables performance evaluation and strategic decision-making?**
 
 ---
 
@@ -23,39 +26,39 @@ However, raw datasets typically lack:
 - Consistency  
 - Analytical readiness  
 
-This project bridges that gap by transforming raw data into a **business-ready analytical model**.
+✔ This project transforms raw data into a **business-ready analytical model**.
 
 ---
 
 ## Data Cleaning & Preparation
 
-The dataset was systematically transformed to ensure analytical usability:
+The dataset was systematically transformed to ensure analytical usability.
 
-### Audience Structuring
+### 🔹 Audience Structuring
 
 The `Target_Audience` column was decomposed into:
 
 - `Target_Age`  
 - `Target_Gender`  
 
-This enables:
+**Impact:**
 
-- Granular segmentation  
-- Improved filtering in dashboards  
+- Enables granular segmentation  
+- Improves dashboard filtering  
 
 ---
 
-### Column Reordering
+### 🔹 Column Reordering
 
-Columns were reorganized to follow an analytical flow:
+Columns were reorganized into a logical analytical flow:
 
-**Identification → Targeting → Configuration → Metrics → Financials**
+> **Identification → Targeting → Configuration → Metrics → Financials**
 
-This enhances:
+**Impact:**
 
-- Readability  
-- Data modeling alignment  
-- BI usability  
+- Improves readability  
+- Aligns with data modeling practices  
+- Enhances BI usability  
 
 ---
 
@@ -71,7 +74,7 @@ Includes:
 
 ---
 
-## Column Categorization (Foundation for Data Modeling)
+## Column Categorization (Modeling Foundation)
 
 | Category                  | Columns                                                                 |
 |--------------------------|-------------------------------------------------------------------------|
@@ -83,6 +86,79 @@ Includes:
 
 ---
 
+## Data Modeling – Star Schema
+
+To enable scalable and efficient analytics, a **Star Schema** was designed.
+
+---
+
+![](01_Data_Modeling/Entity_Relationship_Diagram/ERD.png)
+
+### Fact Table
+
+#### `Fact_Campaign_Performance`
+
+Central table capturing measurable business events:
+
+- Impressions  
+- Clicks  
+- Engagement_Score  
+- Conversion_Rate  
+- Acquisition_Cost  
+- ROI  
+
+---
+
+### Dimension Tables
+
+Descriptive tables providing analytical context:
+
+- `Dim_Campaign` → Campaign details  
+- `Dim_Audience` → Audience segmentation  
+- `Dim_Channel` → Marketing channels  
+- `Dim_Date` → Time-based analysis  
+
+---
+
+### Relationships
+
+- One-to-many relationships from dimensions → fact table  
+- Surrogate keys implemented for:
+  - Data consistency  
+  - Faster joins  
+  - Scalability  
+
+---
+
+### Why Star Schema?
+
+- Optimized query performance  
+- Simplified dashboard development  
+- Scalable for large datasets  
+- Industry-standard BI architecture  
+
+---
+
+## Python Implementation
+
+Using **Pandas**, the data model was programmatically built:
+
+- Generated dimension tables  
+- Constructed fact table with calculated metrics  
+- Maintained relational integrity  
+- Exported all tables into a single Excel file  
+
+---
+
+## Best Practices Applied
+
+- ID columns positioned on the **left**  
+- Consistent naming conventions  
+- Clear separation of facts vs dimensions  
+- Analytical-friendly structure  
+
+---
+
 ## Project Structure
 
 ```text
@@ -90,37 +166,40 @@ Marketing_Project/
 │
 ├── 00_Data/
 │   ├── Raw Data/ 
-|           # The raw dataset is private
-│   ├── Cleaned Data/ 
-|       └── Cleaned_Dataset.xlsx
+│   │   └── (Private)
+│   ├── Cleaned Data/
+│   │   └── Cleaned_Dataset.xlsx
 │   └── Data Dictionary/
-|       └── Data Dictionary.xlsx
+│       └── Data Dictionary.xlsx
 │
 ├── 01_Data_Modeling/
-│   ├── (Coming Soon)
+│   ├── Entity_Relationship_Diagram/
+│   │   └── ERD.png
+│   ├── Final_Dataset/
+│   │   └── Marketing_Dataset.xlsx
+│   └── Building_a_Star_Schema.py
 │
 ├── 02_Dashboard/
-│   ├── (Coming Soon)
+│   └── (Coming Soon)
 │
 ├── 03_Insights_and_Recommendation/
-│   ├── (Coming Soon)
+│   └── (Coming Soon)
 │
 └── README.md
 ```
 
+--- 
 
----
+## Project Status 
 
-## 🚧 Project Status
+### ✅ Completed 
 
-### ✅ Completed
+- Data Cleaning 
+- Data Structuring 
+- Data Dictionary 
+- Star Schema Data Modeling 
 
-- Data Cleaning  
-- Data Structuring  
-- Data Dictionary  
+### ⏳ Upcoming 
 
-### ⏳ Upcoming
-
-- Star Schema Data Modeling  
-- Tableau Dashboard  
-- Insights & Recommendations  
+- Tableau Dashboard 
+- Insights & Recommendations
