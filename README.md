@@ -26,7 +26,7 @@ However, raw datasets typically lack:
 - Consistency  
 - Analytical readiness  
 
-✔ This project transforms raw data into a **business-ready analytical model**.
+✔ This project transforms raw data into a **business-ready analytical system**.
 
 ---
 
@@ -90,8 +90,6 @@ Includes:
 
 To enable scalable and efficient analytics, a **Star Schema** was designed.
 
----
-
 ![](01_Data_Modeling/Entity_Relationship_Diagram/ERD.png)
 
 ### Fact Table
@@ -110,8 +108,6 @@ Central table capturing measurable business events:
 ---
 
 ### Dimension Tables
-
-Descriptive tables providing analytical context:
 
 - `Dim_Campaign` → Campaign details  
 - `Dim_Audience` → Audience segmentation  
@@ -144,18 +140,102 @@ Descriptive tables providing analytical context:
 Using **Pandas**, the data model was programmatically built:
 
 - Generated dimension tables  
-- Constructed fact table with calculated metrics  
+- Constructed fact table  
 - Maintained relational integrity  
 - Exported all tables into a single Excel file  
 
 ---
 
-## Best Practices Applied
+## Dashboard – Tableau (Decision Layer)
 
-- ID columns positioned on the **left**  
-- Consistent naming conventions  
-- Clear separation of facts vs dimensions  
-- Analytical-friendly structure  
+The final stage transforms the data model into an **interactive decision-making system** using Tableau.
+
+---
+
+### Dashboard Objective
+
+> Provide a unified view of campaign performance to identify:
+- High-performing channels  
+- Profitable audience segments  
+- Inefficient cost allocations  
+- Optimization opportunities  
+
+---
+
+### Key Metrics (KPIs)
+
+- Impressions  
+- Clicks  
+- Conversion Rate  
+- Acquisition Cost  
+- CTR (Click-Through Rate)  
+- ROI  
+
+---
+
+### Dashboard Structure
+
+The dashboard is designed across multiple analytical views:
+
+#### 1. Campaign Type Analysis
+![](02_Dashboard/Dashboard Snapshots/Campaign Type Page.png)
+
+#### 2. Channel Performance
+![](02_Dashboard/Dashboard Snapshots/Channel Page.png)
+
+#### 3. Company-Level Performance
+![](02_Dashboard/Dashboard Snapshots/Company Page.png)
+
+#### 4. Customer Segment Analysis
+![](02_Dashboard/Dashboard Snapshots/Customer Segment Page.png)
+
+#### 5. Geographic Insights
+![](02_Dashboard/Dashboard Snapshots/Location Page.png)
+
+#### 6. Target Age Analysis
+![](02_Dashboard/Dashboard Snapshots/Target Age Page.png)
+
+#### 7. Target Gender Insights
+![](02_Dashboard/Dashboard Snapshots/Target Gender Page.png)
+
+#### 8. Detailed Data View
+![](02_Dashboard/Dashboard Snapshots/Detailed Table.png)
+
+---
+
+### Key Features
+
+- Fully interactive filters:
+  - Company  
+  - Campaign Type  
+  - Customer Segment  
+  - Channel  
+  - Location  
+  - Target Audience  
+
+- Drill-down capabilities across dimensions  
+- Consistent KPI tracking across all views  
+- Time-based trend analysis  
+
+---
+
+### Design System
+
+- Dark theme for high contrast and readability  
+- Consistent color palette for clarity  
+- KPI-first layout for immediate insights  
+- Minimal clutter for focused analysis  
+
+---
+
+## Insights & Business Value
+
+This dashboard enables:
+
+- Identification of high-ROI channels  
+- Detection of inefficient cost allocation  
+- Audience targeting optimization  
+- Campaign performance benchmarking  
 
 ---
 
@@ -180,26 +260,25 @@ Marketing_Project/
 │   └── Building_a_Star_Schema.py
 │
 ├── 02_Dashboard/
-│   └── (Coming Soon)
-│
-├── 03_Insights_and_Recommendation/
-│   └── (Coming Soon)
+│   ├── Dashboard Snapshots
+│   │   ├── Campaign Type Page.png
+│   │   ├── Channel Page.png
+│   │   ├── Company Page.png
+│   │   ├── Customer Segment Page.png
+│   │   ├── Detailed Table.png
+│   │   ├── Location Page.png
+│   │   ├── Target Age Page.png
+│   │   └── Target Gender Page.png 
+│   ├── Images
+│   │   ├── Clear_Filter_Icon.png
+│   │   ├── Filter_Hidden.png
+│   │   ├── filter_icon.png
+│   │   ├── Filter_Shown.png
+│   │   ├── Image_Download_Icon.png
+│   │   ├── PDF_Download_Icon.png
+│   │   ├── Table_Activation_Mode.png
+│   │   └── Table_Non_Activation_Mode.png
+│   └── Marketing_Dashboard.twbx
 │
 └── README.md
 ```
-
---- 
-
-## Project Status 
-
-### ✅ Completed 
-
-- Data Cleaning 
-- Data Structuring 
-- Data Dictionary 
-- Star Schema Data Modeling 
-
-### ⏳ Upcoming 
-
-- Tableau Dashboard 
-- Insights & Recommendations
