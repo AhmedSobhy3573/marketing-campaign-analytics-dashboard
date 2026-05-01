@@ -178,28 +178,28 @@ The final stage transforms the data model into an **interactive decision-making 
 The dashboard is designed across multiple analytical views:
 
 #### 1. Campaign Type Analysis
-![](02_Dashboard/Dashboard Snapshots/Campaign Type Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Campaign%20Type%20Page.png)
 
 #### 2. Channel Performance
-![](02_Dashboard/Dashboard Snapshots/Channel Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Channel%20Page.png)
 
 #### 3. Company-Level Performance
-![](02_Dashboard/Dashboard Snapshots/Company Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Company%20Page.png)
 
 #### 4. Customer Segment Analysis
-![](02_Dashboard/Dashboard Snapshots/Customer Segment Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Customer%20Segment%20Page.png)
 
 #### 5. Geographic Insights
-![](02_Dashboard/Dashboard Snapshots/Location Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Location%20Page.png)
 
 #### 6. Target Age Analysis
-![](02_Dashboard/Dashboard Snapshots/Target Age Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Target%20Age%20Page.png)
 
 #### 7. Target Gender Insights
-![](02_Dashboard/Dashboard Snapshots/Target Gender Page.png)
+![](02_Dashboard/Dashboard%20Snapshots/Target%20Gender%20Page.png)
 
 #### 8. Detailed Data View
-![](02_Dashboard/Dashboard Snapshots/Detailed Table.png)
+![](02_Dashboard/Dashboard%20Snapshots/Detailed%20Table.png)
 
 ---
 
